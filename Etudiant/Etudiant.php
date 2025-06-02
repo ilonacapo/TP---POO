@@ -15,8 +15,12 @@ class Etudiant {
         array_push($this->notes, $note);
     }
 
-    private function getNotes() : array {
+    public function getNotes() : array {
         return $this->notes;
+    }
+
+    public function getNom() : string {
+        return $this->nom;
     }
 
     public function calculerMoyenne() : float{

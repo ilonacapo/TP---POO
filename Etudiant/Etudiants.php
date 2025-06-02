@@ -1,6 +1,6 @@
 <?php 
 
-class Etudiants {
+class Etudiants{
     private $liste_etudiants = [];
 
     public function __construct(){
@@ -20,7 +20,7 @@ class Etudiants {
         $moyennes = [];
 
         foreach ($this->liste_etudiants as $etudiant) {
-            $nom = $etudiant->nom;
+            $nom = $etudiant->getNom();
             $moyenne = $etudiant->calculerMoyenne();
             $moyennes[$nom] = $moyenne;
         }
