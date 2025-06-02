@@ -12,14 +12,14 @@ class Etudiant {
     }
 
     public function ajouterNote(float $note) {
-        $this->notes = array_push($this->notes, $note);
+        array_push($this->notes, $note);
     }
 
     private function getNotes() : array {
         return $this->notes;
     }
 
-    private function calculerMoyenne() : float{
+    public function calculerMoyenne() : float{
          $moyenne = (array_sum($this->notes) / count($this->notes));
          return $moyenne;
     }
@@ -27,9 +27,9 @@ class Etudiant {
     public function afficherInformations() {
         $nom = $this->nom;
         $prenom = $this->prenom;
-        $notes = $this->getNotes();
+        $notes = implode(" ", $this->getNotes());
         $moyenne = $this->calculerMoyenne();
 
-        echo "Informations de l'étudiant.\nNom: $nom\nPrénom(s): $prenom\nNotes: $notes\nMoyenne: $moyenne";
+        echo "Informations de l'étudiant.\nNom: $nom\nPrénom(s): $prenom\nNotes: $notes\nMoyenne: $moyenne\n";
     }
 }
