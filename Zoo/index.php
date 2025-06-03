@@ -11,5 +11,6 @@ $animaux = [
 
 foreach($animaux as $animal) {
     $animal->decrire();
-    $animal->crier();
+   $cri = $animal->crier();
+   echo "$cri\n";
 }
