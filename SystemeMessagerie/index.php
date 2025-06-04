@@ -8,6 +8,6 @@ $notifications = [
     new NotificationEmail,
 ];
 
-foreach($notifications as $notif) {
+foreach ($notifications as $notif) {
     $notif->envoyerNotification();
 }
